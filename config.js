@@ -5,11 +5,11 @@ const path = require('path')
 const configPath = path.join(__dirname, './config.env')
 const databasePath = path.join(__dirname, './database.db')
 if (existsSync(configPath)) require('dotenv').config({ path: configPath })
-const DATABASE_URL =
+const DATABASE_URL = postgresql://mmmm_uwj4_user:JkdlvahY0vgEF9ijsnzKUqfQT3GYYUeV@dpg-cs59lelumphs73aqn12g-a/mmmm_uwj4
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'levanter_12cb72fed373b048c68caa5a89e0da8cb3').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -50,7 +50,7 @@ module.exports = {
   MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
   REJECT_CALL: process.env.REJECT_CALL,
   VPS: toBool(process.env.VPS),
-  AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
+  AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'true').trim(),
   SEND_READ: process.env.SEND_READ,
   KOYEB: toBool(process.env.KOYEB),
   KOYEB_NAME: (process.env.KOYEB_NAME || '').trim(),
@@ -79,7 +79,7 @@ module.exports = {
   GEMINI_API_KEY: (process.env.GEMINI_API_KEY || '').trim(),
   ADMINS: process.env.GROUP_ADMINS || '',
   RENDER_NAME: (process.env.RENDER_NAME || '').trim(),
-  RENDER_API_KEY: (process.env.RENDER_API_KEY || '').trim(),
+  RENDER_API_KEY: (process.env.RENDER_API_KEY || 'rnd_4kKjHWN69xpHcVgAggXanpzulAv3').trim(),
   TIMEZONE: process.env.TIMEZONE,
   CMD_REACTION: process.env.CMD_REACTION || 'true',
 }
